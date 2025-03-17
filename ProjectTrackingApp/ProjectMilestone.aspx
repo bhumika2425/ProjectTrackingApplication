@@ -22,7 +22,7 @@
             text-align: center;
         }
 
-        /* Centering Project ID Selection */
+        /* Centering Project ID Selection*/
         .selection-container {
             text-align: center;
             margin: 20px 0;
@@ -101,13 +101,9 @@
 
     <!-- Centered Project ID Selection -->
     <div class="selection-container">
-        <asp:Label ID="Label2" runat="server" Text="Project ID:"></asp:Label>
-        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="styled-dropdown">
-            <asp:ListItem Text="-- Select Project --" Value="0"></asp:ListItem>
-            <asp:ListItem Text="PJ001" Value="PJ001"></asp:ListItem>
-            <asp:ListItem Text="PJ002" Value="PJ002"></asp:ListItem>
-            <asp:ListItem Text="PJ003" Value="PJ003"></asp:ListItem>
-        </asp:DropDownList>
+        <asp:Label ID="Label2" runat="server" Text="Project Name:"></asp:Label>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="PROJECT_NAME" DataValueField="PROJECT_ID"></asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;PROJECT_ID&quot;, &quot;PROJECT_NAME&quot; FROM &quot;PROJECT&quot;"></asp:SqlDataSource>
     </div>
 
     <p><strong>Milestone Details</strong></p>

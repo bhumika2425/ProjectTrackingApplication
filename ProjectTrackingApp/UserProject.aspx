@@ -111,12 +111,12 @@
     <div class="user-selection">
         
         <asp:Label ID="Label2" runat="server" Text="User ID:"></asp:Label>
-        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="styled-dropdown">
-            <asp:ListItem Text="-- Select User --" Value="0"></asp:ListItem>
-            <asp:ListItem Text="User001" Value="User001"></asp:ListItem>
-            <asp:ListItem Text="User002" Value="User002"></asp:ListItem>
-            <asp:ListItem Text="User003" Value="User003"></asp:ListItem>
-        </asp:DropDownList>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="username" DataTextField="USER_NAME" DataValueField="USER_ID"></asp:DropDownList>
+
+
+        <asp:SqlDataSource ID="username" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;USER_NAME&quot;, &quot;USER_ID&quot; FROM &quot;PERSONS&quot;"></asp:SqlDataSource>
+
+
     </div>
 
     <p><strong>Project Details</strong></p>
@@ -160,5 +160,7 @@
             </tr>
         </tbody>
     </table>
+
+
 
 </asp:Content>

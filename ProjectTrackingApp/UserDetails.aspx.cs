@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ProjectTrackingApp
 {
-    public partial class UserDetails : System.Web.UI.Page
+    public partial class UserDetails : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
