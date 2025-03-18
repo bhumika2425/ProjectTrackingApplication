@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\projecttrackingapp\\subtaskdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|c:\\users\\bhumi\\source\\repos\\projecttrackingapp\\projecttrackingapp\\subtaskdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|solutionrelative:projecttrackingapp\\subtaskdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -31,7 +31,7 @@
       "RelativeMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|solutionrelative:projecttrackingapp\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|c:\\users\\bhumi\\source\\repos\\projecttrackingapp\\projecttrackingapp\\userproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\projecttrackingapp\\userproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{6A484C3C-0CC9-45FF-8F24-E3E3A8C153E4}|ProjectTrackingApp\\ProjectTrackingApp.csproj|solutionrelative:projecttrackingapp\\userproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -90,8 +90,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -102,8 +106,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\MilestoneDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-02T03:30:24.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T03:30:24.779Z"
             },
             {
               "$type": "Document",
@@ -115,8 +118,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\ProjectDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-02T03:26:06.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T03:26:06.858Z"
             },
             {
               "$type": "Document",
@@ -126,7 +128,6 @@
               "RelativeDocumentMoniker": "ProjectTrackingApp\\Site.Master",
               "ToolTip": "C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\ProjectTrackingApp\\Site.Master",
               "RelativeToolTip": "ProjectTrackingApp\\Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-03-02T03:21:31.889Z",
               "EditorCaption": ""
@@ -137,8 +138,8 @@
               "Title": "SubtaskDetails.aspx",
               "DocumentMoniker": "C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\ProjectTrackingApp\\SubtaskDetails.aspx",
               "RelativeDocumentMoniker": "ProjectTrackingApp\\SubtaskDetails.aspx",
-              "ToolTip": "C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\ProjectTrackingApp\\SubtaskDetails.aspx*",
-              "RelativeToolTip": "ProjectTrackingApp\\SubtaskDetails.aspx*",
+              "ToolTip": "C:\\Users\\bhumi\\source\\repos\\ProjectTrackingApp\\ProjectTrackingApp\\SubtaskDetails.aspx",
+              "RelativeToolTip": "ProjectTrackingApp\\SubtaskDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-03-02T03:29:11.876Z",
@@ -154,8 +155,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\TaskDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-02T03:26:57.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T03:26:57.491Z"
             },
             {
               "$type": "Document",
@@ -167,8 +167,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\ProjectMilestone.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-12T03:40:28.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T03:40:28.823Z"
             },
             {
               "$type": "Document",
@@ -180,8 +179,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\UserDetails.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T04:03:33.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T04:03:33.771Z"
             },
             {
               "$type": "Document",
@@ -193,8 +191,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\UserDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-12T03:02:01.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T03:02:01.309Z"
             },
             {
               "$type": "Document",
@@ -206,8 +203,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\UserProject.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-12T03:55:15.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T03:55:15.575Z"
             },
             {
               "$type": "Document",
@@ -219,8 +215,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\UserDetails.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T04:03:36.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T04:03:36.486Z"
             },
             {
               "$type": "Document",
@@ -245,8 +240,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\ProjectMilestone.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:24:58.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:24:58.51Z"
             },
             {
               "$type": "Document",
@@ -258,8 +252,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\TopPerformer.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:31:56.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:31:56.306Z"
             },
             {
               "$type": "Document",
@@ -271,8 +264,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\TopPerformer.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:32:05.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:32:05.609Z"
             },
             {
               "$type": "Document",
@@ -284,8 +276,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\TaskDetails.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAnwGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:22:51.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:22:51.096Z"
             },
             {
               "$type": "Document",
@@ -297,8 +288,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\Contact.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-02T03:24:11.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T03:24:11.383Z"
             },
             {
               "$type": "Document",
@@ -310,8 +300,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\MilestoneDetails.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T03:59:51.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T03:59:51.985Z"
             },
             {
               "$type": "Document",
@@ -323,8 +312,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\TaskDetails.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T04:20:36.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T04:20:36.711Z"
             },
             {
               "$type": "Document",
@@ -336,8 +324,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\About.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T03:54:29.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T03:54:29.145Z"
             },
             {
               "$type": "Document",
@@ -349,8 +336,7 @@
               "RelativeToolTip": "ProjectTrackingApp\\About.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-03-03T03:36:38.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T03:36:38.327Z"
             }
           ]
         }
