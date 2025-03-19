@@ -106,42 +106,6 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;PROJECT_ID&quot;, &quot;PROJECT_NAME&quot; FROM &quot;PROJECT&quot;"></asp:SqlDataSource>
     </div>
 
-    <p><strong>Milestone Details</strong></p>
-    <p>Below are the key milestones for the selected project, tracking progress from requirements gathering to implementation.</p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Milestone ID</th>
-                <th>Milestone Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>MS001</td>
-                <td>Requirement Gathering</td>
-                <td>2024-01-10</td>
-                <td>2024-01-25</td>
-                <td><span class="status-completed">Completed</span></td>
-            </tr>
-            <tr>
-                <td>MS002</td>
-                <td>Design Phase</td>
-                <td>2024-02-01</td>
-                <td>2024-02-28</td>
-                <td><span class="status-in-progress">In Progress</span></td>
-            </tr>
-            <tr>
-                <td>MS003</td>
-                <td>Implementation</td>
-                <td>2024-03-05</td>
-                <td>2024-06-15</td>
-                <td><span class="status-pending">Pending</span></td>
-            </tr>
-        </tbody>
-    </table>
+   
 
 </asp:Content>
