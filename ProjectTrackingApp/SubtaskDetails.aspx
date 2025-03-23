@@ -35,6 +35,7 @@
     /* FormView Styles */
     .formview-container {
         padding: 20px;
+        width: 30%;
         background-color: #ffffff;
         border-radius: 8px;
     }
@@ -210,8 +211,8 @@
                 TASK_ID:
                 <asp:TextBox ID="TASK_IDTextBox" runat="server" Text='<%# Bind("TASK_ID") %>' CssClass="form-input" />
                 <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" CssClass="linkbutton" />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton" />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;"  />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" Style="background-color: darkgrey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
             </InsertItemTemplate>
             <ItemTemplate>
                 SUBTASK_ID:

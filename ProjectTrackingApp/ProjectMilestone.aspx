@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Project Milestone Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProjectMilestone.aspx.cs" Inherits="ProjectTrackingApp.MilestoneDetails" %>
+﻿<%@ Page Title="Project Milestone Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProjectMilestone.aspx.cs" Inherits="ProjectTrackingApp.ProjectMilestone" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
@@ -97,13 +97,30 @@
         }
     </style>
 
-    <h2 id="title"><%: Title %></h2>
+
 
     <!-- Centered Project ID Selection -->
     <div class="selection-container">
-        <asp:Label ID="Label2" runat="server" Text="Project Name:"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="PROJECT_NAME" DataValueField="PROJECT_ID"></asp:DropDownList>
+        <h2>Select Project</h2>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" DataSourceID="SqlDataSource1" DataTextField="PROJECT_NAME" DataValueField="PROJECT_ID"></asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;PROJECT_ID&quot;, &quot;PROJECT_NAME&quot; FROM &quot;PROJECT&quot;"></asp:SqlDataSource>
+        <div style="height:30px;"></div>
+        <h2>Milestone Details</h2>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MILESTONE_ID" DataSourceID="milestones">
+            <Columns>
+                <asp:BoundField DataField="MILESTONE_ID" HeaderText="MILESTONE_ID" ReadOnly="True" SortExpression="MILESTONE_ID" />
+                <asp:BoundField DataField="MILESTONE_NAME" HeaderText="MILESTONE_NAME" SortExpression="MILESTONE_NAME" />
+                <asp:BoundField DataField="DUE_DATE" HeaderText="DUE_DATE" SortExpression="DUE_DATE" />
+                <asp:BoundField DataField="PROJECT_ID" HeaderText="PROJECT_ID" SortExpression="PROJECT_ID" />
+            </Columns>
+        </asp:GridView>
+        
+        <asp:SqlDataSource ID="milestones" runat="server" ConnectionString="<%$ ConnectionStrings:Bhumika24 %>" ProviderName="<%$ ConnectionStrings:Bhumika24.ProviderName %>" SelectCommand="SELECT MILESTONE_ID, MILESTONE_NAME, DUE_DATE, PROJECT_ID FROM MILESTONE WHERE (PROJECT_ID = :project_id)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="project_id" PropertyName="SelectedValue" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        
     </div>
 
    

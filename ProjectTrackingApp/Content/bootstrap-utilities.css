@@ -67,8 +67,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0d6efd;
-  --bs-link-hover-color: #0a58ca;
+  --bs-link-color: #000;
+  --bs-link-hover-color: #000;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -80,22 +80,22 @@
 }
 
 .text-bg-primary {
-  color: #fff !important;
+  color: #fff;
   background-color: RGBA(13, 110, 253, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
-  color: #fff !important;
+  color: #fff;
   background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
-  color: #fff !important;
+  color: #fff;
   background-color: RGBA(25, 135, 84, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-info {
-  color: #000 !important;
+  color: #000;
   background-color: RGBA(13, 202, 240, var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -120,17 +120,17 @@
 }
 
 .link-primary {
-  color: #0d6efd !important;
+  color: #0d6efd;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #0a58ca !important;
+  color: #0a58ca;
 }
 
 .link-secondary {
-  color: #6c757d !important;
+  color: #6c757d;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #565e64 !important;
+  color: #565e64 ;
 }
 
 .link-success {

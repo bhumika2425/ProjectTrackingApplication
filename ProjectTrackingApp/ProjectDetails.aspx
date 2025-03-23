@@ -2,6 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
+        <!-- Add Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <style>
     /* Global Styles */
     body {
@@ -13,8 +15,8 @@
 
     main {
         padding: 30px;
-        background-color: white;
-        max-width: 1200px;
+   background-color: white;
+        max-width: 2000px;
         margin: 30px auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -35,6 +37,7 @@
     }
     /* FormView Styles */
     .formview-container {
+        width: 30%;
         padding: 20px;
         background-color: #ffffff;
         border-radius: 8px;
@@ -156,6 +159,55 @@
         background-color: #c82333;
     }
 
+    /* Button Styles for ItemTemplate */
+            .editBtn {
+                background-color: #28a745; /* Green */
+                color: white;
+                padding: 6px 12px;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+            }
+
+            .editBtn:hover {
+                background-color: #218838; /* Darker green on hover */
+            }
+
+            .deleteBtn {
+                background-color: #dc3545; /* Red */
+                color: white;
+                padding: 6px 12px;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+            }
+
+            .deleteBtn:hover {
+                background-color: #c82333; /* Darker red on hover */
+            }
+
+            .linkButton {
+                background-color: transparent;
+                color: #007bff; /* Blue */
+                padding: 8px 12px;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+            }
+
+            .linkButton:hover {
+                background-color: #f1f1f1; /* Light gray on hover */
+            }
+
     /* Responsive Design */
     @media (max-width: 768px) {
         main {
@@ -197,8 +249,8 @@
                 PROJECT_STATUS:
                 <asp:TextBox ID="PROJECT_STATUSTextBox" runat="server" Text='<%# Bind("PROJECT_STATUS") %>' CssClass="form-input" />
                 <br />
-                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" CssClass="linkbutton" />
-                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton"  />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkButton"  />
             </EditItemTemplate>
             <InsertItemTemplate>
                 PROJECT_ID:
@@ -216,8 +268,8 @@
                 PROJECT_STATUS:
                 <asp:TextBox ID="PROJECT_STATUSTextBox" runat="server" Text='<%# Bind("PROJECT_STATUS") %>' CssClass="form-input" />
                 <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" CssClass="linkbutton"  />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton"  />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;"  />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" Style="background-color: darkgrey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
             </InsertItemTemplate>
             <ItemTemplate>
                 PROJECT_ID:
@@ -235,9 +287,9 @@
                 PROJECT_STATUS:
                 <asp:Label ID="PROJECT_STATUSLabel" runat="server" Text='<%# Bind("PROJECT_STATUS") %>' />
                 <br />
-                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="edit-btn" />
-                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" CssClass="delete-btn" />
-                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" CssClass="linkbutton" />
+                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
+                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" Style="background-color: grey; color: red; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
+                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" CssClass="linkButton" />
             </ItemTemplate>
 </asp:FormView>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PROJECT_ID" DataSourceID="SqlDataSource1" CssClass="table-responsive">

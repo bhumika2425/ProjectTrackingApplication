@@ -14,7 +14,7 @@
     main {
         padding: 30px;
         background-color: white;
-        max-width: 1200px;
+        max-width: 2000px;
         margin: 30px auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -36,12 +36,12 @@
     /* FormView Styles */
     .formview-container {
         padding: 20px;
+        width: 30%;
         background-color: #ffffff;
         border-radius: 8px;
     }
 
     .formview-container label {
-        font-weight: bold;
         color: #555;
 
     }
@@ -182,60 +182,56 @@
         <div class="container">
                     <asp:FormView ID="FormView1" runat="server" DataKeyNames="TASK_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" CssClass="formview-container">
             <EditItemTemplate>
-                TASK_ID:
-                <asp:Label ID="TASK_IDLabel1" runat="server" Text='<%# Eval("TASK_ID") %>' />
-                <br />
-
-                TASK_NAME:
-                <asp:TextBox ID="TASK_NAMETextBox" runat="server" Text='<%# Bind("TASK_NAME") %>' CssClass="form-input"  />
-                <br />
-                TASK_START_DATE:
-                <asp:TextBox ID="TASK_START_DATETextBox" runat="server" Text='<%# Bind("TASK_START_DATE") %>' CssClass="form-input"  />
-                <br />
-                TASK_DUE_DATE:
-                <asp:TextBox ID="TASK_DUE_DATETextBox" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' CssClass="form-input"  />
-                <br />
-                TASK_STATUS:
-                <asp:TextBox ID="TASK_STATUSTextBox" runat="server" Text='<%# Bind("TASK_STATUS") %>' CssClass="form-input"  />
-                <br />
+                <label>TASK_ID:</label><br />
+        <asp:Label ID="TASK_IDLabel1" runat="server" Text='<%# Eval("TASK_ID") %>' /><br />
+        
+        <label>TASK_NAME:</label><br />
+        <asp:TextBox ID="TASK_NAMETextBox" runat="server" Text='<%# Bind("TASK_NAME") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_START_DATE:</label><br />
+        <asp:TextBox ID="TASK_START_DATETextBox" runat="server" Text='<%# Bind("TASK_START_DATE") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_DUE_DATE:</label><br />
+        <asp:TextBox ID="TASK_DUE_DATETextBox" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_STATUS:</label><br />
+        <asp:TextBox ID="TASK_STATUSTextBox" runat="server" Text='<%# Bind("TASK_STATUS") %>' CssClass="form-input" /><br />
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" CssClass="linkbutton" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton" />
             </EditItemTemplate>
             <InsertItemTemplate>
-                TASK_ID:
-                <asp:TextBox ID="TASK_IDTextBox" runat="server" Text='<%# Bind("TASK_ID") %>' CssClass="form-input" />
-                <br />
-                TASK_NAME:
-                <asp:TextBox ID="TASK_NAMETextBox" runat="server" Text='<%# Bind("TASK_NAME") %>' CssClass="form-input" />
-                <br />
-                TASK_START_DATE:
-                <asp:TextBox ID="TASK_START_DATETextBox" runat="server" Text='<%# Bind("TASK_START_DATE") %>' CssClass="form-input" />
-                <br />
-                TASK_DUE_DATE:
-                <asp:TextBox ID="TASK_DUE_DATETextBox" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' CssClass="form-input" />
-                <br />
-                TASK_STATUS:
-                <asp:TextBox ID="TASK_STATUSTextBox" runat="server" Text='<%# Bind("TASK_STATUS") %>' CssClass="form-input" />
-                <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" CssClass="linkbutton" />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton" />
+                <label>TASK_ID:</label><br />
+        <asp:TextBox ID="TASK_IDTextBox" runat="server" Text='<%# Bind("TASK_ID") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_NAME:</label><br />
+        <asp:TextBox ID="TASK_NAMETextBox" runat="server" Text='<%# Bind("TASK_NAME") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_START_DATE:</label><br />
+        <asp:TextBox ID="TASK_START_DATETextBox" runat="server" Text='<%# Bind("TASK_START_DATE") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_DUE_DATE:</label><br />
+        <asp:TextBox ID="TASK_DUE_DATETextBox" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' CssClass="form-input" /><br />
+        
+        <label>TASK_STATUS:</label><br />
+        <asp:TextBox ID="TASK_STATUSTextBox" runat="server" Text='<%# Bind("TASK_STATUS") %>' CssClass="form-input" /><br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;"  />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" Style="background-color: darkgrey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
             </InsertItemTemplate>
             <ItemTemplate>
-                TASK_ID:
-                <asp:Label ID="TASK_IDLabel" runat="server" Text='<%# Eval("TASK_ID") %>' />
-                <br />
-                TASK_NAME:
-                <asp:Label ID="TASK_NAMELabel" runat="server" Text='<%# Bind("TASK_NAME") %>' />
-                <br />
-                TASK_START_DATE:
-                <asp:Label ID="TASK_START_DATELabel" runat="server" Text='<%# Bind("TASK_START_DATE") %>' />
-                <br />
-                TASK_DUE_DATE:
-                <asp:Label ID="TASK_DUE_DATELabel" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' />
-                <br />
-                TASK_STATUS:
-                <asp:Label ID="TASK_STATUSLabel" runat="server" Text='<%# Bind("TASK_STATUS") %>' />
-                <br />
+                <label>TASK_ID:</label><br />
+        <asp:Label ID="TASK_IDLabel" runat="server" Text='<%# Eval("TASK_ID") %>' /><br />
+        
+        <label>TASK_NAME:</label><br />
+        <asp:Label ID="TASK_NAMELabel" runat="server" Text='<%# Bind("TASK_NAME") %>' /><br />
+        
+        <label>TASK_START_DATE:</label><br />
+        <asp:Label ID="TASK_START_DATELabel" runat="server" Text='<%# Bind("TASK_START_DATE") %>' /><br />
+        
+        <label>TASK_DUE_DATE:</label><br />
+        <asp:Label ID="TASK_DUE_DATELabel" runat="server" Text='<%# Bind("TASK_DUE_DATE") %>' /><br />
+        
+        <label>TASK_STATUS:</label><br />
+        <asp:Label ID="TASK_STATUSLabel" runat="server" Text='<%# Bind("TASK_STATUS") %>' /><br />
                 <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="edit-btn" />
                 &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" CssClass="delete-btn" />
                 &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" CssClass="linkbutton" />

@@ -16,7 +16,7 @@
     main {
         padding: 30px;
         background-color: white;
-        max-width: 1200px;
+        max-width: 2050px;
         margin: 30px auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -36,9 +36,14 @@
     }
     /* FormView Styles */
     .formview-container {
+        width: 30%;
         padding: 20px;
         background-color: #ffffff;
         border-radius: 8px;
+        display: flex;
+
+        align-items: start;
+
     }
 
     .formview-container label {
@@ -49,6 +54,7 @@
 
     .formview-container input[type="text"] {
         width: 100%;
+
         padding: 10px;
         margin-bottom: 15px;
         border: 1px solid #ddd;
@@ -59,24 +65,12 @@
     }
 
     .formview-container input[type="text"]:focus {
+        
         border-color: #007bff;
         background-color: #fff;
     }
 
-    .formview-container .linkbutton {
-        font-size: 14px;
-        color: #007bff;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 8px 12px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .formview-container .linkbutton:hover {
-        background-color: #f1f1f1;
-    }
+   
 
     /* GridView Styles */
     .table-responsive {
@@ -115,47 +109,54 @@
         font-size: 16px;
     }
 
-    .table-responsive .btn {
-        font-size: 14px;
+    /* Style for EditButton */
+    #EditButton {
+        background-color: grey;
         color: white;
-        background-color: #007bff;
-        padding: 6px 12px;
         border: none;
         border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
         cursor: pointer;
+        text-decoration: none;
     }
 
-    .table-responsive .btn:hover {
-        background-color: #0056b3;
+    #EditButton:hover {
+        background-color: darkgrey;
     }
 
-    .table-responsive .command-buttons {
-        text-align: center;
-    }
-
-    /* Button Styles */
-    .table-responsive .edit-btn,
-    .table-responsive .delete-btn {
-        background-color: #28a745;
+    /* Style for DeleteButton */
+    #DeleteButton {
+        background-color: darkgrey;
         color: white;
-        padding: 6px 12px;
         border: none;
         border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
         cursor: pointer;
+        text-decoration: none;
     }
 
-    .table-responsive .edit-btn:hover,
-    .table-responsive .delete-btn:hover {
-        background-color: #218838;
+    #DeleteButton:hover {
+        background-color: #555;
     }
 
-    .table-responsive .delete-btn {
-        background-color: #dc3545;
+    /* Style for NewButton */
+    #NewButton {
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
     }
 
-    .table-responsive .delete-btn:hover {
-        background-color: #c82333;
+    #NewButton:hover {
+        background-color: #444;
     }
+
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -218,8 +219,8 @@
                     GRADE_ID:
                     <asp:TextBox ID="GRADE_IDTextBox" runat="server" Text='<%# Bind("GRADE_ID") %>' CssClass="form-input" />
                     <br />
-                    <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" CssClass="linkbutton" />
-                    &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="linkbutton" />
+                    <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" Style="background-color: grey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
+                    &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" Style="background-color: darkgrey; color: white; border: none; border-radius:5px; padding: 5px 10px; font-weight: bold; cursor: pointer; text-decoration: none;" />
                 </InsertItemTemplate>
                 <ItemTemplate>
                     USER_ID:
@@ -237,8 +238,8 @@
                     GRADE_ID:
                     <asp:Label ID="GRADE_IDLabel" runat="server" Text='<%# Bind("GRADE_ID") %>' />
                     <br />
-                    <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="edit-btn" />
-                    &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" CssClass="delete-btn" />
+                    <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="btn btn-primary btn-sm" />
+                    &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
                     &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" CssClass="linkbutton" />
                 </ItemTemplate>
             </asp:FormView>
@@ -246,7 +247,7 @@
     <Columns>
         
         
-        <asp:BoundField DataField="USER_ID" HeaderText="USER_ID" ReadOnly="True" SortExpression="USER_ID" />
+        <asp:BoundField DataField="USER_ID" HeaderText="U_ID" ReadOnly="True" SortExpression="USER_ID" />
         <asp:BoundField DataField="USER_NAME" HeaderText="USER_NAME" SortExpression="USER_NAME" />
         <asp:BoundField DataField="USER_EMAIL" HeaderText="USER_EMAIL" SortExpression="USER_EMAIL" />
         <asp:BoundField DataField="USER_CONTACT" HeaderText="USER_CONTACT" SortExpression="USER_CONTACT" />

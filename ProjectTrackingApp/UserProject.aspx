@@ -105,25 +105,45 @@
         }
     </style>
 
-    <h2 id="title"><%: Title %></h2>
+  
 
     <!-- Centered User ID Selection -->
     <div class="user-selection">
+      <h2>User name:  <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" DataSourceID="username" DataTextField="USER_NAME" DataValueField="USER_ID"></asp:DropDownList>
+        </h2>
+        <asp:SqlDataSource ID="username" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString7 %>" ProviderName="<%$ ConnectionStrings:ConnectionString7.ProviderName %>" SelectCommand="SELECT &quot;USER_ID&quot;, &quot;USER_NAME&quot; FROM &quot;PERSONS&quot;"></asp:SqlDataSource>
+        <div style="height:20px;"></div>
+        <!-- User Details Display -->
+        <div class="user-details">
+            <asp:Label ID="lblUserDetails" runat="server" Text="" Visible="false"></asp:Label>
+        </div>
+        <div style="height:20px;"></div>
         
-        <asp:Label ID="Label2" runat="server" Text="User ID:"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="USER_NAME" DataValueField="USER_ID"></asp:DropDownList>
+        <h2>Project Details</h2>
+        <div style="height:20px;"></div>
+        <p>Below are the projects assigned to the selected user, along with their status and descriptions.</p>
+        <div style="height:20px;"></div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PROJECT_ID" DataSourceID="projectD">
+            <Columns>
+                <asp:BoundField DataField="PROJECT_ID" HeaderText="PROJECT_ID" ReadOnly="True" SortExpression="PROJECT_ID" />
+                <asp:BoundField DataField="PROJECT_NAME" HeaderText="PROJECT_NAME" SortExpression="PROJECT_NAME" />
+                <asp:BoundField DataField="PROJECT_START_DATE" HeaderText="PROJECT_START_DATE" SortExpression="PROJECT_START_DATE" />
+                <asp:BoundField DataField="PROJECT_DUE_DATE" HeaderText="PROJECT_DUE_DATE" SortExpression="PROJECT_DUE_DATE" />
+                <asp:BoundField DataField="PROJECT_STATUS" HeaderText="PROJECT_STATUS" SortExpression="PROJECT_STATUS" />
+            </Columns>
+        </asp:GridView>
 
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;USER_ID&quot;, &quot;USER_NAME&quot; FROM &quot;PERSONS&quot;"></asp:SqlDataSource>
-
-
-        <asp:SqlDataSource ID="username" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString6 %>" ProviderName="<%$ ConnectionStrings:ConnectionString6.ProviderName %>" SelectCommand="SELECT &quot;USER_NAME&quot;, &quot;USER_ID&quot; FROM &quot;PERSONS&quot;"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="projectD" runat="server" ConnectionString="<%$ ConnectionStrings:Bhumika24 %>" ProviderName="<%$ ConnectionStrings:Bhumika24.ProviderName %>" SelectCommand="SELECT p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_START_DATE, p.PROJECT_DUE_DATE, p.PROJECT_STATUS FROM PROJECT p, USER_PROJECT_TASK pt WHERE p.PROJECT_ID = pt.PROJECT_ID AND (pt.USER_ID = :user_id)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="user_id" PropertyName="SelectedValue" />
+            </SelectParameters>
+        </asp:SqlDataSource>
 
 
     </div>
 
-    <p><strong>Project Details</strong></p>
-    <p>&nbsp;</p>
+    
 
 
    
